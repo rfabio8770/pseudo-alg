@@ -69,7 +69,7 @@ sent_condicional: SI expresion ENTONCES lista_sentencias FINSI
 
 sent_mientras   : MIENTRAS expresion lista_sentencias FINMIENTRAS ;
 
-sent_desde      : DESDE sent_asig HASTA primario paso lista_sentencias FINDESDE ;
+sent_desde      : DESDE sent_asig HASTA expresion paso lista_sentencias FINDESDE ;
 
 paso            : PASO NUMERO_ENTERO
                 | /* epsilon */
@@ -95,25 +95,37 @@ const_num       : NUMERO_ENTERO
                 | NUMERO_REAL
                 ;
 
-expresion       : expresion OPSR factor
-                | expresion OP_MOD factor
-                | expresion OPREL factor
-                | expresion OPO factor
+// ==========================================
+// REGLAS DE EXPRESIONES (Jerarquía corregida)
+// ==========================================
+
+expresion       : expresion OPO expresion_logica  // Operador OR (o)
+                | expresion_logica
+                ;
+
+expresion_logica: expresion_logica OPY relacion    // Operador AND (y)
+                | relacion
+                ;
+
+relacion        : relacion OPREL simple_expr       // Operadores relacionales (<, >, =, <>, etc.)
+                | simple_expr
+                ;
+
+simple_expr     : simple_expr OPSR termino         // Suma y resta (+, -)
+                | termino
+                ;
+
+termino         : termino OPMD factor              // Multiplicación y división (*, /)
+                | termino OP_MOD factor            // Módulo (mod)
                 | factor
                 ;
 
-factor          : factor OPMD primario
-                | factor OPY primario
-                | primario
-                ;
-
-primario        : PAR_AB expresion PAR_CE
-                | OPSR primario
-                | NO primario
+factor          : PAR_AB expresion PAR_CE          // Paréntesis (aquí es donde entra (c < 1 o c > 10))
+                | OPSR factor
+                | NO factor
                 | constante
                 | ID arreglo
                 ;
-
 arreglo         : COR_AB lista_ind COR_CE
                 | /* epsilon */
                 ;

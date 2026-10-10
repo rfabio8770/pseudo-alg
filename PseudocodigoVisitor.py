@@ -149,13 +149,28 @@ class PseudocodigoVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by PseudocodigoParser#factor.
-    def visitFactor(self, ctx:PseudocodigoParser.FactorContext):
+    # Visit a parse tree produced by PseudocodigoParser#expresion_logica.
+    def visitExpresion_logica(self, ctx:PseudocodigoParser.Expresion_logicaContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by PseudocodigoParser#primario.
-    def visitPrimario(self, ctx:PseudocodigoParser.PrimarioContext):
+    # Visit a parse tree produced by PseudocodigoParser#relacion.
+    def visitRelacion(self, ctx:PseudocodigoParser.RelacionContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by PseudocodigoParser#simple_expr.
+    def visitSimple_expr(self, ctx:PseudocodigoParser.Simple_exprContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by PseudocodigoParser#termino.
+    def visitTermino(self, ctx:PseudocodigoParser.TerminoContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by PseudocodigoParser#factor.
+    def visitFactor(self, ctx:PseudocodigoParser.FactorContext):
         return self.visitChildren(ctx)
 
 

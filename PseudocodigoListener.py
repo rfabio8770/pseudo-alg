@@ -260,21 +260,48 @@ class PseudocodigoListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by PseudocodigoParser#expresion_logica.
+    def enterExpresion_logica(self, ctx:PseudocodigoParser.Expresion_logicaContext):
+        pass
+
+    # Exit a parse tree produced by PseudocodigoParser#expresion_logica.
+    def exitExpresion_logica(self, ctx:PseudocodigoParser.Expresion_logicaContext):
+        pass
+
+
+    # Enter a parse tree produced by PseudocodigoParser#relacion.
+    def enterRelacion(self, ctx:PseudocodigoParser.RelacionContext):
+        pass
+
+    # Exit a parse tree produced by PseudocodigoParser#relacion.
+    def exitRelacion(self, ctx:PseudocodigoParser.RelacionContext):
+        pass
+
+
+    # Enter a parse tree produced by PseudocodigoParser#simple_expr.
+    def enterSimple_expr(self, ctx:PseudocodigoParser.Simple_exprContext):
+        pass
+
+    # Exit a parse tree produced by PseudocodigoParser#simple_expr.
+    def exitSimple_expr(self, ctx:PseudocodigoParser.Simple_exprContext):
+        pass
+
+
+    # Enter a parse tree produced by PseudocodigoParser#termino.
+    def enterTermino(self, ctx:PseudocodigoParser.TerminoContext):
+        pass
+
+    # Exit a parse tree produced by PseudocodigoParser#termino.
+    def exitTermino(self, ctx:PseudocodigoParser.TerminoContext):
+        pass
+
+
     # Enter a parse tree produced by PseudocodigoParser#factor.
     def enterFactor(self, ctx:PseudocodigoParser.FactorContext):
         pass
 
     # Exit a parse tree produced by PseudocodigoParser#factor.
     def exitFactor(self, ctx:PseudocodigoParser.FactorContext):
-        pass
-
-
-    # Enter a parse tree produced by PseudocodigoParser#primario.
-    def enterPrimario(self, ctx:PseudocodigoParser.PrimarioContext):
-        pass
-
-    # Exit a parse tree produced by PseudocodigoParser#primario.
-    def exitPrimario(self, ctx:PseudocodigoParser.PrimarioContext):
         pass
 
 

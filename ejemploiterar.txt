@@ -1,0 +1,18 @@
+algoritmo EjemploIterar
+var
+    entero num
+inicio
+    imprimir("Ingresa números (ingresa 0 para salir):")
+    
+    iterar
+        leer(num)
+        
+        
+        salir_si (num > 20 y num < 25)
+        
+        imprimir("Ingresaste el número:")
+        imprimir(num)
+    finiterar
+    
+    imprimir("¡Bucle finalizado correctamente!")
+fin.
