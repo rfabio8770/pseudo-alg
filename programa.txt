@@ -1,0 +1,39 @@
+algoritmo EjemploSuma
+var
+    entero a, b, suma
+    entero c
+inicio
+    imprimir("Ingrese el primer numero:")
+    leer(a)
+    imprimir("Ingrese el segundo numero:")
+    leer(b)
+    
+    suma <- a + b
+    
+    imprimir("La suma total es:")
+    imprimir(suma)
+    imprimir("Prueba del si")
+    si suma > 10 entonces
+        imprimir("La suma es mayor a 10")
+    sino
+        imprimir("La suma es menor o igual a 10")
+    finsi
+    imprimir("Prueba del mientras")
+    a = 0
+    mientras a <> b 
+        a = a + 1
+        imprimir(a)
+    finmientras
+    imprimir("Prueba del desde")
+    desde c = 2 hasta 10 paso 2
+        imprimir(c)
+    findesde
+    imprimir("Prueba del repetir")
+    c = 33
+    repetir
+        imprimir(c)
+        c = c - 3
+    hasta_que c == 3
+    
+
+fin.

@@ -1,0 +1,14 @@
+algoritmo Suma
+var
+    entero suma, n
+    entero i
+inicio
+    leer(n)
+    suma = 0
+    desde i = 1 hasta n 
+        suma = suma + i
+    findesde
+
+    imprimir("La suma es:")
+    imprimir(suma)
+fin.
