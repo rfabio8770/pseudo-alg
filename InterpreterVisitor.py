@@ -264,7 +264,7 @@ class InterpreterVisitor(PseudocodigoVisitor):
         elif op == 'mod': return left % right
         
         # Relacionales
-        elif op == '=': return left == right
+        elif op == '==': return left == right
         elif op == '<>': return left != right
         elif op == '<': return left < right
         elif op == '<=': return left <= right

@@ -1,0 +1,26 @@
+algoritmo caso
+var
+    entero nd
+
+inicio
+    leer(nd)
+
+    en_caso nd sea
+        1:
+            imprimir("domingo")
+        2:
+            imprimir("lunes")
+        3:
+            imprimir("martes")
+        4:
+            imprimir("miércoles")
+        5:
+            imprimir("jueves")
+        6:
+            imprimir("viernes")
+        7:
+            imprimir("sábado")
+        otro:
+            imprimir("error")
+    fincaso
+fin.
